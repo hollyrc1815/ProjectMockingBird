@@ -1,0 +1,28 @@
+#loginPage {
+    height: 100%;
+    background: linear-gradient(90deg, #00aced 50%, #FFFFFF 50%);
+}
+
+#login1 {
+	border-radius: 16px;
+}
+
+ #loginText {
+	position: relative;
+	top: 200px;
+		
+ }
+
+#glypcons {
+	color: white;
+	margin-top: 300px;
+}
+#loginForm {
+	margin: 0px;
+}
+
+#leftElements {
+	position: relative;
+	top: -25px;
+	right: -50px;
+}
