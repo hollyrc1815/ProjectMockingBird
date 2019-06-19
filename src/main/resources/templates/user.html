@@ -16,7 +16,7 @@
 		<h2>Profile for <span th:text="${user.firstName}"></span> 
 		<span th:text="${user.lastName}"></span> - <span style="color: #00aced">
 		@<span th:text="${user.username}"></span></span></h2>
-		<h5>Joined <span th:text="${#dates.format(user.createdAt, 'MMMM dd, yyyy')}"></span></h5>
+		<h5>Joined <span th:text="${user.createdAt.date}"></span></h5>
 		
     		<h3>Mocks</h3>
     		
@@ -26,7 +26,7 @@
 						<div class="panel panel-default">	
 							<div class="panel-heading">
 								<h3 class="panel-title">
-								<h5>@<span th:text="${tweet.user.username}"></span> <span th:text="${user.firstName}"></span> <span th:text="${user.lastName}"></span> <small><span th:text="${#dates.format(tweet.createdAt, 'M/d/yy')}"></span></small>
+								<h5>@<span th:text="${tweet.user.username}"></span> <span th:text="${user.firstName}"></span> <span th:text="${user.lastName}"></span> <small><span th:text="${tweet.date}"></span></small>
 								</h3></h5>
 					        </div>
 								<div class="panel-body"> <p th:utext="${tweet.message}"></p></div>
