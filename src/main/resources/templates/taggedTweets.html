@@ -10,8 +10,10 @@
 </head>
 
 <body>
+<div th:replace="fragments/navbar :: navbar" ></div>
     <div class="container">
-        <div th:replace="fragments/navbar :: navbar" ></div>
+
+
         <h2>Tweets containing #<span th:text="${tag}"></span></h2>
          <div class="list-group" th:each="tweet:${tweetList}">
             <div class="list-group-item list-group-item-action">

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 <title>Log in</title>
@@ -13,7 +14,7 @@
 </head>
 
 <body id="loginPage">
-	<div th:replace="fragments/navbar :: navbar"></div>
+	<!-- <div th:replace="fragments/navbar :: navbar"></div> -->
 	<div class="container">
 		<div class="row">
 			<div id="glypcons" class="col-md-6 ">
@@ -51,7 +52,7 @@
 							</div>
 							<div class="col-md-4">
 								<label> </label>
-								<button id="login1" class="btn btn-md btn-success btn-block"
+								<button id="login3" class="btn btn-md btn-success btn-block"
 									name="Submit" value="Login" type="Submit">Log in</button>
 							</div>
 						</form>
@@ -65,7 +66,7 @@
 						</div>
 						<div class="col -md-6 ">
 							<a id="login1" class="btn btn-block btn-primary" href="../signup">SignUp</a>
-							<a id="login1" class="btn btn-block  btn-default" href="../index">Login</a>
+							<a id="login2" class="btn btn-block  btn-default" href="../index">Login</a>
 						</div>
 					</div>
 				</div>

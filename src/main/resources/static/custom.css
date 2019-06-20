@@ -1,29 +1,49 @@
 #loginPage {
     height: 100%;
     background: linear-gradient(90deg, #00aced 50%, #FFFFFF 50%);
+    font-family: "Franklin Gothic Medium", sans-serif;
 }
+h3 { font-family: "Franklin Gothic Medium", sans-serif; }
+P{font-family: "Franklin Gothic Medium", sans-serif;}
+	
 
 #login1 {
 	border-radius: 16px;
+	background: #00aced;
+	border: #00aced;
+}
+#login2 {
+	border-radius: 16px;
+	background: white;
+	border-style: solid;
+	border-color: #00aced;
+	color: #00aced;
+}
+#login3 {
+	border-radius: 30px;
+	background: white;
+	border-color: #00aced;
+	border-style: solid;
+	color: #00aced;
 }
 
  #loginText {
 	position: relative;
-	top: 200px;
-		
+	top: 200px;	
  }
 
 #glypcons {
 	color: white;
-	margin-top: 300px;
+	margin-top: 300px;	
 }
 #loginForm {
 	margin: 0px;
+	margin-top: 10px;
 }
 
 #leftElements {
 	position: relative;
-	top: -25px;
+	top: -15px;
 	right: -50px;
 }
 
@@ -33,4 +53,17 @@ a.username {
 
 a.tag {
     color: #0084b4
+}
+.navbar {
+	background-color: white;
+	border-color: #00aced;	
+}
+#myMargin {
+	margin: 0px 0px 10px 0px;
+}
+#navHeader {
+	margin-left: 30px;
+}
+#navRight {
+	margin-right: 30px;
 }

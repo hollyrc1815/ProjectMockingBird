@@ -49,7 +49,7 @@ public class UserController {
         SetFollowingStatus(users, usersFollowing, model);
         return "users";
     }
-    
+   
     
     private void SetFollowingStatus(List<User> users, List<User> usersFollowing, Model model) {
         HashMap<String,Boolean> followingStatus = new HashMap<>();
@@ -76,16 +76,11 @@ public class UserController {
             if (followedUser.getUsername().equals(username)) {
                 isFollowing = true;
             }
-        }
-    	
-    	User user = userService.findByUsername(username);
+        }User user = userService.findByUsername(username);
         List<TweetDisplay > tweets = tweetService.findAllByUser(user);
         model.addAttribute("tweetList", tweets);
         model.addAttribute("user", user);
-       
-
-        model.addAttribute("following", isFollowing);
-        
+        model.addAttribute("following", isFollowing);        
         boolean isSelfPage = loggedInUser.getUsername().equals(username);
         model.addAttribute("isSelfPage", isSelfPage);
         return "user";

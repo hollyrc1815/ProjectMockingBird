@@ -10,13 +10,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.tts.TechTalentTwitter.model.User;
+
+import com.tts.TechTalentTwitter.repository.UserRepository;
+
 import com.tts.TechTalentTwitter.service.UserService;
 
 @Controller
 public class AuthorizationController {
 
 	@Autowired
-    private UserService userService;
+    private UserService userService;	    
+	@Autowired
+	private UserRepository userRepository;
 
     @GetMapping(value="/login")
     public String login(){
@@ -34,7 +39,7 @@ public class AuthorizationController {
         model.addAttribute("user", user);
         return "registration";
     }
-
+    
     @PostMapping(value = "/signup")
     public String createNewUser(@Valid User user, BindingResult bindingResult, Model model) {
         User userExists = userService.findByUsername(user.getUsername());
@@ -44,10 +49,11 @@ public class AuthorizationController {
         if (!bindingResult.hasErrors()) {
             userService.saveNewUser(user);
             model.addAttribute("success", "Sign up successful!");
-            model.addAttribute("user", new User());
-        }
-        return "registration";
-    }
+            model.addAttribute("user", new User()); 
+        } 
+        return "registration";  }
+        
+       
     
-    
+        
 }

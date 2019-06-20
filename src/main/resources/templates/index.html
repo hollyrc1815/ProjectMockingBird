@@ -8,15 +8,40 @@
 <title>Project Mockingbird</title>
 </head>
 <body>
-<div class="container">
-	<div th:replace="fragments/navbar :: navbar" ></div>
-	<h1>Welcome To Project Mockingbird</h1>	
-	
-		<div class="col -md-6 col-md-offset-8">
-	       <a class="btn btn-block btn-primary" href="../signup">SignUp</a>
-	       <a class="btn btn-block  btn-default" href="../login">Login</a>
-       </div>    
-</div>	
+
+		<div th:replace="fragments/navbar :: navbar" ></div>
+		
+			<div class="container">
+				<div class="col-md-8 col-md-offset-2 ">
+						<div class="panel panel-default">
+			  				<div class="panel-body">
+			    				<h3>Login in to MockingBird</h3>
+			    				<form th:action="@{/login}" method="post">
+								<br/>
+									<label>User Name</label> 
+									<input type="text" id="username" name="username" th:placeholder="Username" class="form-control"/>
+									<br/>					
+									<label>Password</label> 
+									<input type="password" th:placeholder="Password" id="password" name="password"class="form-control" /> 
+								<br/>
+									<div align="center" th:if="${param.error}">
+									<h4 style="color: red">Login unsuccessful.</h4>
+								</div>
+								<div class="col-md-4 col-md-offset-4">
+									<label> </label>
+									<button id="login3" class="btn btn-md btn-success btn-block"
+										name="Submit" value="Login" type="Submit">Log in</button>
+								</div>
+							</form>
+			  				</div>
+			  			<div class="panel-footer">
+			  				<p>New to MockingBird?</p><a href="../signup">Sign up now</a>
+			  			</div>
+					</div>
+				</div>
+			</div>
+		
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/custom.js"></script>
